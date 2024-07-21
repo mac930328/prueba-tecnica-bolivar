@@ -10,32 +10,33 @@
 	</parent>
 
 	<groupId>com.bolivar.hexagonal-architecture</groupId>
-	<artifactId>application</artifactId>
+	<artifactId>boot</artifactId>
 	<packaging>jar</packaging>
 
 	<dependencies>
-		<!-- Dependencias específicas de la aplicación -->
+		<!-- Dependencias específicas del boot -->
 		<dependency>
 			<groupId>com.bolivar.hexagonal-architecture</groupId>
-			<artifactId>domain</artifactId>
+			<artifactId>infrastructure</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
 
 		<dependency>
-			<groupId>org.springframework</groupId>
-			<artifactId>spring-context</artifactId>
-			<optional>true</optional>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter</artifactId>
 		</dependency>
-
 		<dependency>
-			<groupId>jakarta.annotation</groupId>
-			<artifactId>jakarta.annotation-api</artifactId>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
-
-		<dependency>
-			<groupId>org.springframework</groupId>
-			<artifactId>spring-tx</artifactId>
-		</dependency>
-
 	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+		</plugins>
+	</build>
 </project>

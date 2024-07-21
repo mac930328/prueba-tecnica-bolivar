@@ -9,7 +9,9 @@
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
 
+	<groupId>com.bolivar.hexagonal-architecture</groupId>
 	<artifactId>domain</artifactId>
+	<packaging>jar</packaging>
 
 	<dependencies>
 		<!-- Dependencias específicas del dominio -->
